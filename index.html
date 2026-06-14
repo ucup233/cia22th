@@ -1346,6 +1346,7 @@
 
     // Track total loading status
     let preloaderCompleted = false;
+    let experienceStarted = false;
 
     // Typewriter Configuration
     const typewriterText = "Selamat ulang tahun yang ke-22! 🎉";
@@ -1355,6 +1356,17 @@
     // Initialize preloading on document load
     window.addEventListener('DOMContentLoaded', () => {
       startPreloader();
+    });
+
+    // Pause/Resume music when user leaves/returns to the tab
+    document.addEventListener('visibilitychange', () => {
+      if (!experienceStarted) return;
+      const bgMusic = document.getElementById('bg-music');
+      if (document.hidden) {
+        bgMusic.pause();
+      } else {
+        bgMusic.play().catch(e => console.warn("Failed to auto-resume playback:", e));
+      }
     });
 
     // ------------------------------
@@ -1473,6 +1485,8 @@
     // EXPERIENCE INITIATOR
     // ------------------------------
     function startBirthdayExperience() {
+      experienceStarted = true; // Mark experience as active
+
       // 1. Hide Loader
       const loader = document.getElementById('loading-screen');
       loader.classList.add('fade-out');
