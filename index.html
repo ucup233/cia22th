@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Sayang! 🎀</title>
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Spesial ulang tahun ke-22 buat Sayang.">
+  <meta property="og:title" content="Selamat Ulang Tahun Sayang! 🎀">
+  <meta property="og:description" content="Spesial ulang tahun ke-22 buat Sayang.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap');
+
+    :root {
+      --pink-primary: #FF6B9D;
+      --pink-hover: #FF4D87;
+      --pink-light: #FFB3D1;
+      --pink-very-light: #FFF0F5;
+      --pink-dark: #E91E8C;
+      --white: #FFFFFF;
+      --gold: #FFD700;
+      --font-title: 'Pacifico', cursive;
+      --font-sub: 'Dancing Script', cursive;
+      --font-body: 'Nunito', sans-serif;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 10px 15px -3px rgba(233, 30, 140, 0.1), 0 4px 6px -2px rgba(233, 30, 140, 0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(233, 30, 140, 0.15), 0 10px 10px -5px rgba(233, 30, 140, 0.07);
+      --glass-bg: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--pink-very-light);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--pink-light);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--pink-primary);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 50%, #FFD1DC 100%);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      color: #4A4A4A;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* General Utility Layout classes */
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      padding: 60px 0;
+      position: relative;
+    }
+
+    /* Glass Card Style */
+    .glass-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 30px 20px;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ------------------------------
+       1. PRELOADER & SPLASH SCREEN
+    ------------------------------ */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #FFB3D1 0%, #FFF0F5 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    #loading-screen.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader-heart {
+      font-size: 5rem;
+      animation: beat 1.2s infinite ease-in-out;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 4px 6px rgba(233, 30, 140, 0.2));
+    }
+
+    @keyframes beat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      25% {
+        transform: scale(1.15);
+      }
+
+      40% {
+        transform: scale(1.05);
+      }
+
+      60% {
+        transform: scale(1.2);
+      }
+    }
+
+    .loader-title {
+      font-family: var(--font-title);
+      color: var(--pink-dark);
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .loader-desc {
+      font-size: 0.95rem;
+      color: #6a6a6a;
+      margin-bottom: 30px;
+      min-height: 24px;
+      font-weight: 600;
+    }
+
+    /* Loading Progress Bar */
+    .progress-container {
+      width: 80%;
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.6);
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      position: relative;
+    }
+
+    #progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--pink-primary), var(--pink-dark));
+      border-radius: 6px;
+      transition: width 0.2s ease-out;
+    }
+
+    #progress-text {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--pink-dark);
+      margin-bottom: 20px;
+    }
+
+    /* Splash Action Button */
+    .pencet-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--pink-primary) 0%, var(--pink-dark) 100%);
+      color: var(--white);
+      border: none;
+      padding: 16px 40px;
+      font-family: var(--font-body);
+      font-size: 1.25rem;
+      font-weight: 800;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(233, 30, 140, 0.4);
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .pencet-btn.show {
+      transform: scale(1);
+      opacity: 1;
+      animation: bounceBtn 2s infinite;
+    }
+
+    @keyframes bounceBtn {
+
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 8px 25px rgba(233, 30, 140, 0.4);
+      }
+
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 12px 30px rgba(233, 30, 140, 0.6);
+      }
+    }
+
+    .pencet-btn:active {
+      transform: scale(0.95);
+      box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3);
+    }
+
+    /* ------------------------------
+       2. BACKGROUND MUSIC CONTROLLER
+    ------------------------------ */
+    #mute-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, transform 0.3s ease, background 0.3s ease;
+    }
+
+    #mute-btn.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #mute-btn:hover {
+      transform: scale(1.1);
+      background: var(--white);
+    }
+
+    #mute-btn:active {
+      transform: scale(0.9);
+    }
+
+    /* ------------------------------
+       3. BACKGROUND ANIMATIONS (HEARTS)
+    ------------------------------ */
+    .bg-hearts-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .floating-heart {
+      position: absolute;
+      bottom: -50px;
+      color: rgba(255, 107, 157, 0.2);
+      font-size: 1.5rem;
+      animation: floatUp 8s linear infinite;
+      user-select: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.8;
+      }
+
+      90% {
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(-105vh) rotate(360deg) translateX(50px);
+        opacity: 0;
+      }
+    }
+
+    /* Canvas Confetti */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* Screen Shake for Quiz Option */
+    .shake-screen {
+      animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+    }
+
+    @keyframes shake {
+
+      10%,
+      90% {
+        transform: translate3d(-2px, 2px, 0) rotate(0.5deg);
+      }
+
+      20%,
+      80% {
+        transform: translate3d(4px, -4px, 0) rotate(-1deg);
+      }
+
+      30%,
+      50%,
+      70% {
+        transform: translate3d(-6px, 6px, 0) rotate(1.5deg);
+      }
+
+      40%,
+      60% {
+        transform: translate3d(6px, -6px, 0) rotate(-1.5deg);
+      }
+    }
+
+    /* Rain Effect for Quiz Ngambek Option */
+    .rain-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 998;
+      overflow: hidden;
+    }
+
+    .rain-drop {
+      position: absolute;
+      top: -50px;
+      font-size: 1.8rem;
+      animation: fallDown 3s linear forwards;
+      user-select: none;
+    }
+
+    @keyframes fallDown {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.8;
+      }
+
+      90% {
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(105vh);
+        opacity: 0;
+      }
+    }
+
+    /* ------------------------------
+       4. HERO GREETING SECTION
+    ------------------------------ */
+    #main-content {
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    #main-content.visible {
+      opacity: 1;
+    }
+
+    .hero-img-container {
+      position: relative;
+      margin: 0 auto 30px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 6px solid var(--white);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      animation: floatImg 4s ease-in-out infinite;
+    }
+
+    @keyframes floatImg {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .hero-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      color: var(--pink-dark);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--pink-primary);
+      margin-bottom: 20px;
+      min-height: 26px;
+      /* Avoid layout shift on typing */
+    }
+
+    /* Cursor for typewriter */
+    .typed-cursor {
+      display: inline-block;
+      width: 2px;
+      background-color: var(--pink-primary);
+      margin-left: 2px;
+      animation: blinkCursor 0.8s infinite;
+    }
+
+    @keyframes blinkCursor {
+
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .hero-ribbon {
+      margin-top: 15px;
+      font-size: 2rem;
+    }
+
+    /* ------------------------------
+       5. DOA & ucapan (SCROLL-REVEAL)
+    ------------------------------ */
+    .section-title {
+      font-family: var(--font-title);
+      color: var(--pink-dark);
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '🎀';
+      display: block;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    .doa-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .doa-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border-left: 6px solid var(--pink-primary);
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .doa-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-left-color: var(--pink-dark);
+    }
+
+    .doa-emoji {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .doa-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 600;
+      color: #555555;
+    }
+
+    /* Scroll Reveal Class */
+    .reveal-card {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+      transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    }
+
+    .reveal-card.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* ------------------------------
+       6. TERIMA KASIH SECTION
+    ------------------------------ */
+    .terimakasih-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 35px 25px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sweet-letter {
+      font-family: var(--font-sub);
+      font-size: 1.7rem;
+      line-height: 1.5;
+      color: #3d3d3d;
+      margin-bottom: 25px;
+      white-space: pre-line;
+      text-align: center;
+    }
+
+    .cute-note {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--pink-dark);
+      background: rgba(233, 30, 140, 0.08);
+      padding: 12px 18px;
+      border-radius: 15px;
+      display: inline-block;
+      border: 1px dashed var(--pink-primary);
+    }
+
+    .card-heart-decoration {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 1.5rem;
+      opacity: 0.3;
+      animation: floatImg 3s ease-in-out infinite;
+    }
+
+    /* ------------------------------
+       7. KUIS INTERAKTIF SECTION
+    ------------------------------ */
+    .kuis-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 30px 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .quiz-question {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #333333;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    .quiz-btn {
+      background: var(--pink-very-light);
+      color: var(--pink-dark);
+      border: 2px solid var(--pink-light);
+      padding: 14px 20px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+
+    .quiz-btn:hover {
+      background: var(--pink-light);
+      transform: translateY(-2px);
+    }
+
+    .quiz-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Quiz Result Screen */
+    .quiz-result-container {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .result-emoji {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      display: block;
+      animation: pulseEmoji 1s infinite alternate;
+    }
+
+    @keyframes pulseEmoji {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.15);
+      }
+    }
+
+    .result-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.6;
+      color: #333333;
+      margin-bottom: 25px;
+    }
+
+    .quiz-reset-btn {
+      background: var(--pink-primary);
+      color: var(--white);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(255, 107, 157, 0.3);
+    }
+
+    .quiz-reset-btn:hover {
+      background: var(--pink-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ------------------------------
+       8. FOTO GALERI SECTION
+    ------------------------------ */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .photo-frame {
+      background: var(--white);
+      padding: 10px 10px 25px 10px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2), box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      transform-origin: center;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .photo-frame:hover {
+      box-shadow: var(--shadow-md);
+      z-index: 10;
+    }
+
+    /* Tilt presets */
+    .photo-frame:nth-child(odd) {
+      transform: rotate(-2deg);
+    }
+
+    .photo-frame:nth-child(even) {
+      transform: rotate(2.5deg);
+    }
+
+    .photo-frame:nth-child(3) {
+      transform: rotate(1.5deg);
+    }
+
+    .photo-frame:nth-child(4) {
+      transform: rotate(-1.5deg);
+    }
+
+    .photo-frame:hover {
+      transform: scale(1.05) rotate(0deg) translateY(-5px) !important;
+    }
+
+    .photo-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #f0f0f0;
+    }
+
+    .photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .photo-frame:hover .photo-wrapper img {
+      transform: scale(1.08);
+    }
+
+    /* Rotate portrait assets that are stored sideways */
+    #img2,
+    #img3 {
+      transform: rotate(90deg);
+    }
+
+    .photo-frame:hover .photo-wrapper #img2,
+    .photo-frame:hover .photo-wrapper #img3 {
+      transform: rotate(90deg) scale(1.08);
+    }
+
+    .photo-caption {
+      margin-top: 12px;
+      font-family: var(--font-sub);
+      font-size: 1.25rem;
+      color: #555555;
+      text-align: center;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Lightbox Modal */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    #lightbox.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      color: var(--white);
+      font-size: 2.2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .lightbox-close:hover {
+      transform: scale(1.1);
+    }
+
+    .lightbox-img-wrapper {
+      max-width: 90%;
+      max-height: 70vh;
+      border: 8px solid var(--white);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      transform: scale(0.9);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    }
+
+    #lightbox.open .lightbox-img-wrapper {
+      transform: scale(1);
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 65vh;
+      display: block;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .lightbox-caption {
+      color: var(--white);
+      font-family: var(--font-title);
+      font-size: 1.5rem;
+      margin-top: 20px;
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ------------------------------
+       9. PELUKAN VIRTUAL & PENUTUP
+    ------------------------------ */
+    .hug-section-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 35px 20px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      text-align: center;
+    }
+
+    .hug-btn {
+      background: linear-gradient(135deg, #FF6B9D 0%, var(--pink-dark) 100%);
+      color: var(--white);
+      border: none;
+      padding: 16px 36px;
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 800;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(233, 30, 140, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      user-select: none;
+      margin-bottom: 25px;
+    }
+
+    .hug-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(233, 30, 140, 0.45);
+    }
+
+    .hug-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* Virtual Hug Animation Elements */
+    .hug-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(255, 179, 209, 0.3);
+      pointer-events: none;
+      z-index: 1500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .hug-hand {
+      font-size: 8rem;
+      position: absolute;
+      transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    }
+
+    .hug-left {
+      left: -150px;
+      transform: rotate(45deg);
+    }
+
+    .hug-right {
+      right: -150px;
+      transform: scaleX(-1) rotate(45deg);
+    }
+
+    /* Screen glow animation keyframe */
+    .screen-glow {
+      animation: glowFlash 2.5s ease forwards;
+    }
+
+    @keyframes glowFlash {
+      0% {
+        opacity: 0;
+        background-color: rgba(255, 179, 209, 0);
+      }
+
+      30% {
+        opacity: 1;
+        background-color: rgba(255, 107, 157, 0.55);
+      }
+
+      100% {
+        opacity: 0;
+        background-color: rgba(255, 179, 209, 0);
+      }
+    }
+
+    .hug-status {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--pink-dark);
+      min-height: 24px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Closing Letter Section */
+    .closing-text-card {
+      border-top: 2px dashed var(--pink-light);
+      padding-top: 30px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .closing-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: #555555;
+      margin-bottom: 25px;
+    }
+
+    .closing-signature {
+      font-family: var(--font-title);
+      color: var(--pink-dark);
+      font-size: 1.8rem;
+      margin-top: 15px;
+    }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 40px 0 60px 0;
+      font-size: 0.85rem;
+      color: #999999;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* ------------------------------
+       10. RESPONSIVE MEDIA QUERIES
+    ------------------------------ */
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .loader-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.65rem;
+        margin-bottom: 30px;
+      }
+
+      .glass-card,
+      .terimakasih-card,
+      .kuis-card,
+      .hug-section-card {
+        padding: 25px 15px;
+        border-radius: 20px;
+      }
+
+      .sweet-letter {
+        font-size: 1.4rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .photo-frame {
+        padding: 8px 8px 20px 8px;
+      }
+
+      .photo-caption {
+        font-size: 1.1rem;
+        margin-top: 8px;
+      }
+
+      .lightbox-img-wrapper {
+        border-width: 5px;
+      }
+
+      .hug-hand {
+        font-size: 6rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .doa-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .gallery-grid {
+        gap: 20px;
+      }
+
+      .photo-frame {
+        padding: 12px 12px 30px 12px;
+      }
+
+      .photo-caption {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Audio Element -->
+  <!-- GANTI URL LAGU DI SINI -->
+  <audio id="bg-music" preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Canvas Confetti Overlay -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Rain Emojis Overlay for Quiz ngambek -->
+  <div id="rain-overlay" class="rain-container"></div>
+
+  <!-- Virtual Hug Emojis Overlay -->
+  <div id="hug-overlay" class="hug-overlay">
+    <div id="hug-hand-left" class="hug-hand hug-left">🤗</div>
+    <div id="hug-hand-right" class="hug-hand hug-right">🤗</div>
+  </div>
+
+  <!-- 🔇/🔊 Float Button -->
+  <button id="mute-btn" aria-label="Toggle Mute" title="Toggle Musik">🔊</button>
+
+  <!-- 1. LOADING & SPLASH SCREEN -->
+  <div id="loading-screen">
+    <div class="loader-heart">💖</div>
+    <h1 class="loader-title">Buat Sayang 🎀</h1>
+    <div id="loading-status" class="loader-desc">Menghubungkan ke hati kamu... 🔌</div>
+
+    <div class="progress-container" id="progress-wrapper">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="progress-text">0%</div>
+
+    <button id="pencet-btn" class="pencet-btn" aria-label="Mulai Kejutan">Pencet Aku 🎀</button>
+  </div>
+
+  <!-- MAIN WRAPPER (HIDDEN ON START) -->
+  <div id="main-content">
+    <div class="container">
+
+      <!-- BACKGROUND FLOATING HEARTS -->
+      <div class="bg-hearts-container" id="bg-hearts"></div>
+
+      <!-- SECTION 1: HERO GREETING -->
+      <section id="hero">
+        <div class="glass-card">
+          <div class="hero-img-container">
+            <!-- Ganti dengan path foto kamu -->
+            <img id="img-opening" src="fotoopening.jpg" alt="Foto Opening Sayang">
+          </div>
+          <h2 class="hero-title">Alooo Sayang~ 🎂</h2>
+          <div class="hero-subtitle">
+            <span id="typewriter-text"></span><span class="typed-cursor">|</span>
+          </div>
+          <div class="hero-ribbon">🎈🎁✨🍰</div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: DOA & HARAPAN -->
+      <section id="doa">
+        <h3 class="section-title">Doa aku buat sayang ✨</h3>
+        <div class="doa-grid">
+          <!-- Card 1 -->
+          <div class="doa-card reveal-card">
+            <span class="doa-emoji">💖</span>
+            <p class="doa-text">Semoga kamu selalu sehat dan bahagia terus yaaa sayang.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="doa-card reveal-card">
+            <span class="doa-emoji">🌸</span>
+            <p class="doa-text">Semoga semua impian dan cita-cita sayang tercapai yaaa.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="doa-card reveal-card">
+            <span class="doa-emoji">✨</span>
+            <p class="doa-text">Semoga kerjaannya lancar, rezekinya lancar dan uangnya banyak (buat belanja bareng aku
+              juga boleh hehe :").</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="doa-card reveal-card">
+            <span class="doa-emoji">🌙</span>
+            <p class="doa-text">Semoga sayang selalu dilindungi dan dimudahkan setiap langkahnya.</p>
+          </div>
+          <!-- Card 5 -->
+          <div class="doa-card reveal-card">
+            <span class="doa-emoji">😊</span>
+            <p class="doa-text">Semoga sayang makin cantik tiap hari (padahal setiap hari selalu cantik).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: TERIMA KASIH -->
+      <section id="terimakasih">
+        <div class="terimakasih-card reveal-card">
+          <div class="card-heart-decoration">🌸</div>
+          <h3 class="section-title">Makasih ya sayang... 🥹</h3>
+          <div class="sweet-letter">
+            Makasih ya sayang udah bertahan sama aku sampai sejauh ini.
+            Makasih udah sabar banget ngadepin aku yang kadang banyak nyebelinnya hehe.
+            Makasih juga selalu ada buat aku terus.
+          </div>
+          <div class="cute-note">
+            Sayang emang yang terbaik deh, sayang banyak banyak muaaahhh
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: KUIS INTERAKTIF -->
+      <section id="kuis">
+        <div class="kuis-card reveal-card">
+          <h3 class="section-title">Pertanyaan Penting! 🤨</h3>
+
+          <div id="quiz-question-box">
+            <p class="quiz-question">Kamu sayang sama aku ga? 🥺</p>
+            <div class="quiz-options">
+              <button class="quiz-btn" onclick="selectQuizOption('iya')">Iya 😊</button>
+              <button class="quiz-btn" onclick="selectQuizOption('sayang-banget')">Sayang banget 🥰</button>
+              <button class="quiz-btn" onclick="selectQuizOption('banget-banget')">Banget banget 💘</button>
+              <button class="quiz-btn" onclick="selectQuizOption('sayang-aja')">Sayang aja 😐</button>
+            </div>
+          </div>
+
+          <!-- Quiz Result Screen -->
+          <div id="quiz-result-box" class="quiz-result-container">
+            <span id="quiz-emoji" class="result-emoji">🥰</span>
+            <p id="quiz-message" class="result-text"></p>
+            <button class="quiz-reset-btn" onclick="resetQuiz()">Pilih lagi deh~</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: GALERI FOTO -->
+      <section id="galeri">
+        <h3 class="section-title">Foto-foto kita 📸💕</h3>
+        <div class="gallery-grid">
+          <!-- Polaroid 1 -->
+          <div class="photo-frame reveal-card" onclick="openLightbox('foto1', 'Pink-pink lucuu ✨')">
+            <div class="photo-wrapper">
+              <!-- Ganti dengan path foto kamu -->
+              <img id="img1" src="foto1.JPG" alt="Foto 1">
+            </div>
+            <div class="photo-caption">Pink-pink lucuu ✨</div>
+          </div>
+
+          <!-- Polaroid 2 -->
+          <div class="photo-frame reveal-card" onclick="openLightbox('foto2', 'Di lift sebelum anniv dinner 🥰')">
+            <div class="photo-wrapper">
+              <!-- Ganti dengan path foto kamu -->
+              <img id="img2" src="foto2.jpg" alt="Foto 2">
+            </div>
+            <div class="photo-caption">Di lift sebelum anniv dinner 🥰</div>
+          </div>
+
+          <!-- Polaroid 3 -->
+          <div class="photo-frame reveal-card"
+            onclick="openLightbox('foto3', 'Ini pas mau ke pameran jaring ikan kan? 🌸')">
+            <div class="photo-wrapper">
+              <!-- Ganti dengan path foto kamu -->
+              <img id="img3" src="foto3.jpg" alt="Foto 3">
+            </div>
+            <div class="photo-caption">Ke pameran jaring ikan kan? 🌸</div>
+          </div>
+
+          <!-- Polaroid 4 -->
+          <div class="photo-frame reveal-card" onclick="openLightbox('foto4', 'Inget ga pas di dieng? 💖')">
+            <div class="photo-wrapper">
+              <!-- Ganti dengan path foto kamu -->
+              <img id="img4" src="foto4.jpg" alt="Foto 4">
+            </div>
+            <div class="photo-caption">Inget ga pas di dieng? 💖</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: PELUKAN VIRTUAL & PENUTUP -->
+      <section id="penutup">
+        <div class="hug-section-card reveal-card">
+          <h3 class="section-title">Virtual Hug 🤗</h3>
+
+          <button id="hug-trigger-btn" class="hug-btn" onclick="sendVirtualHug()">Peluk Virtual 🤗</button>
+          <div id="hug-status" class="hug-status"></div>
+
+          <div class="closing-text-card">
+            <p class="closing-paragraph">
+              Selamat ulang tahun ke-22, Sayang 🎂<br>
+              Semoga hari ini jadi hari yang paling happy buat sayang.<br>
+              Aku sayang sama sayang — hari ini, besok, dan seterusnya 💕
+            </p>
+            <div class="closing-signature">— Aku 🩷</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>Created with 💖 especially for you</p>
+        <p>© 2026. All rights reserved.</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close Lightbox" onclick="closeLightbox()">×</button>
+    <div class="lightbox-img-wrapper" onclick="event.stopPropagation()">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Zoomed view">
+    </div>
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Asset Configuration
+    const assets = [
+      { id: 'fotoopening', url: 'fotoopening.jpg', size: 629084 },
+      { id: 'foto1', url: 'foto1.JPG', size: 649063 },
+      { id: 'foto2', url: 'foto2.jpg', size: 813167 },
+      { id: 'foto3', url: 'foto3.jpg', size: 848900 },
+      { id: 'foto4', url: 'foto4.jpg', size: 906732 },
+      { id: 'music', url: 'music.mp3', size: 3309561 }
+    ];
+
+    const loadedAssets = {};
+    const progressMap = {};
+    assets.forEach(a => progressMap[a.id] = { loaded: 0, total: a.size });
+
+    // Track total loading status
+    let preloaderCompleted = false;
+
+    // Typewriter Configuration
+    const typewriterText = "Selamat ulang tahun yang ke-22! 🎉";
+    let typewriterIndex = 0;
+    const typewriterSpeed = 100; // ms
+
+    // Initialize preloading on document load
+    window.addEventListener('DOMContentLoaded', () => {
+      startPreloader();
+    });
+
+    // ------------------------------
+    // PRELOADER & STREAM FETCH LOGIC
+    // ------------------------------
+    async function startPreloader() {
+      const bar = document.getElementById('progress-bar');
+      const text = document.getElementById('progress-text');
+      const statusText = document.getElementById('loading-status');
+
+      const promises = assets.map(async (asset) => {
+        try {
+          const response = await fetch(asset.url);
+          if (!response.ok) throw new Error(`Status ${response.status}`);
+
+          const contentLength = response.headers.get('content-length');
+          const totalBytes = contentLength ? parseInt(contentLength, 10) : asset.size;
+          progressMap[asset.id].total = totalBytes;
+
+          const reader = response.body.getReader();
+          let loadedBytes = 0;
+          const chunks = [];
+
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            loadedBytes += value.length;
+
+            // Update individual progress map
+            progressMap[asset.id].loaded = loadedBytes;
+            updateOverallProgress();
+          }
+
+          // Convert collected chunks into Blob & Object URL
+          const blob = new Blob(chunks);
+          const objectUrl = URL.createObjectURL(blob);
+          loadedAssets[asset.id] = objectUrl;
+
+        } catch (error) {
+          console.warn(`Failed loading ${asset.url} via stream, using relative url fallback:`, error);
+          // Fallback simulation: report 100% loaded immediately
+          progressMap[asset.id].loaded = asset.size;
+          updateOverallProgress();
+          loadedAssets[asset.id] = asset.url; // Use standard url
+        }
+      });
+
+      await Promise.all(promises);
+    }
+
+    function updateOverallProgress() {
+      let totalLoaded = 0;
+      let totalSize = 0;
+      for (const id in progressMap) {
+        totalLoaded += progressMap[id].loaded;
+        totalSize += progressMap[id].total;
+      }
+
+      const percent = Math.min(Math.round((totalLoaded / totalSize) * 100), 100);
+
+      const bar = document.getElementById('progress-bar');
+      const text = document.getElementById('progress-text');
+      const statusText = document.getElementById('loading-status');
+
+      bar.style.width = percent + '%';
+      text.textContent = percent + '%';
+
+      // Status messaging
+      if (percent < 20) {
+        statusText.textContent = "Menyambungkan koneksi cinta... 🔌";
+      } else if (percent < 45) {
+        statusText.textContent = "Menyiapkan balon-balon lucu... 🎈";
+      } else if (percent < 70) {
+        statusText.textContent = "Menyetel musik ulang tahun... 🎵";
+      } else if (percent < 90) {
+        statusText.textContent = "Menata galeri foto gemes kamu... 📸";
+      } else if (percent < 100) {
+        statusText.textContent = "Mengemas doa-doa tulus... 🎁✨";
+      } else {
+        statusText.textContent = "Pencet ini ya sayang! 👇";
+
+        if (!preloaderCompleted) {
+          preloaderCompleted = true;
+          revealStartButton();
+        }
+      }
+    }
+
+    function revealStartButton() {
+      // Hide progress bar elements smoothly
+      document.getElementById('progress-wrapper').style.display = 'none';
+      document.getElementById('progress-text').style.display = 'none';
+
+      // Inject cached elements src
+      document.getElementById('img-opening').src = loadedAssets['fotoopening'];
+      document.getElementById('img1').src = loadedAssets['foto1'];
+      document.getElementById('img2').src = loadedAssets['foto2'];
+      document.getElementById('img3').src = loadedAssets['foto3'];
+      document.getElementById('img4').src = loadedAssets['foto4'];
+
+      // Bind music source
+      const bgMusic = document.getElementById('bg-music');
+      bgMusic.src = 'music.mp3'; // Use standard URL to bypass WebKit blob range request bug!
+      bgMusic.load(); // Force reload audio with the new source
+
+      // Show action button
+      const btn = document.getElementById('pencet-btn');
+      btn.classList.add('show');
+
+      // Trigger click event behavior on button click
+      btn.addEventListener('click', startBirthdayExperience);
+    }
+
+    // ------------------------------
+    // EXPERIENCE INITIATOR
+    // ------------------------------
+    function startBirthdayExperience() {
+      // 1. Hide Loader
+      const loader = document.getElementById('loading-screen');
+      loader.classList.add('fade-out');
+
+      // Remove loader from DOM after transition
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 800);
+
+      // 2. Play music from 40s
+      const bgMusic = document.getElementById('bg-music');
+
+      let playStarted = false;
+      try {
+        bgMusic.currentTime = 40;
+      } catch (e) {
+        console.warn("Failed to set currentTime synchronously:", e);
+      }
+
+      const playPromise = bgMusic.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            bgMusic.currentTime = 40;
+            playStarted = true;
+          })
+          .catch(error => {
+            console.warn("Autoplay audio blocked or interrupted by browser settings.", error);
+          });
+      }
+
+      // Safety fallback in case it wasn't ready during synchronous click stack
+      bgMusic.addEventListener('loadedmetadata', () => {
+        bgMusic.currentTime = 40;
+        if (!playStarted) {
+          bgMusic.play().catch(e => console.warn("Fallback play failed:", e));
+        }
+      }, { once: true });
+
+      // 3. Make main content visible
+      const mainContent = document.getElementById('main-content');
+      mainContent.classList.add('visible');
+
+      // 4. Make music control visible
+      const muteBtn = document.getElementById('mute-btn');
+      muteBtn.classList.add('visible');
+
+      // 5. Setup Loop Listener (returns to 40s)
+      bgMusic.addEventListener('ended', () => {
+        bgMusic.currentTime = 40;
+        bgMusic.play().catch(e => console.warn("Audio loop failed", e));
+      });
+
+      // 6. Setup Audio Toggle
+      muteBtn.addEventListener('click', () => {
+        bgMusic.muted = !bgMusic.muted;
+        if (bgMusic.muted) {
+          muteBtn.textContent = '🔇';
+          muteBtn.style.color = '#999999';
+        } else {
+          muteBtn.textContent = '🔊';
+          muteBtn.style.color = 'var(--pink-dark)';
+        }
+      });
+
+      // 7. Trigger confetti explosion
+      initConfetti();
+      triggerConfettiBurst(120);
+
+      // 8. Start floating hearts in background
+      startFloatingHearts();
+
+      // 9. Start Typewriter on hero page
+      setTimeout(startTypewriter, 800);
+
+      // 10. Start Intersection Observer for scroll animations
+      startScrollReveal();
+    }
+
+    // ------------------------------
+    // FLOATING BACKGROUND HEARTS
+    // ------------------------------
+    function startFloatingHearts() {
+      const container = document.getElementById('bg-hearts');
+      const emojis = ['💖', '🌸', '✨', '🎈', '❤️', '💕', '🎀'];
+
+      setInterval(() => {
+        if (document.hidden) return; // Save memory if page backgrounded
+
+        const heart = document.createElement('div');
+        heart.classList.add('floating-heart');
+        heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+        // Random placement & sizes
+        const startX = Math.random() * 100; // %
+        const size = 1 + Math.random() * 1.5; // rem
+        const duration = 6 + Math.random() * 6; // seconds
+
+        heart.style.left = startX + 'vw';
+        heart.style.fontSize = size + 'rem';
+        heart.style.animationDuration = duration + 's';
+
+        container.appendChild(heart);
+
+        // Clean up memory
+        setTimeout(() => {
+          heart.remove();
+        }, duration * 1000);
+      }, 800);
+    }
+
+    // ------------------------------
+    // TYPEWRITER EFFECT
+    // ------------------------------
+    function startTypewriter() {
+      const container = document.getElementById('typewriter-text');
+      if (typewriterIndex < typewriterText.length) {
+        container.textContent += typewriterText.charAt(typewriterIndex);
+        typewriterIndex++;
+        setTimeout(startTypewriter, typewriterSpeed);
+      }
+    }
+
+    // ------------------------------
+    // SCROLL REVEAL (INTERSECTION OBSERVER)
+    // ------------------------------
+    function startScrollReveal() {
+      const cards = document.querySelectorAll('.reveal-card');
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            // Stop observing once it reveals
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    }
+
+    // ------------------------------
+    // CONFETTI SYSTEM (CANVAS 2D)
+    // ------------------------------
+    let canvas, ctx;
+    let particles = [];
+    const colors = ['#FF6B9D', '#FFB3D1', '#FFF0F5', '#E91E8C', '#FFD700', '#FF4D87', '#FFFFFF'];
+
+    function initConfetti() {
+      canvas = document.getElementById('confetti-canvas');
+      ctx = canvas.getContext('2d');
+      resizeConfettiCanvas();
+      window.addEventListener('resize', resizeConfettiCanvas);
+
+      // Start loop
+      requestAnimationFrame(confettiLoop);
+    }
+
+    function resizeConfettiCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    class ConfettiParticle {
+      constructor(x, y, isHeart = false) {
+        this.x = x;
+        this.y = y;
+        this.size = 5 + Math.random() * 12;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+        this.speedX = -3 + Math.random() * 6;
+        this.speedY = -3 - Math.random() * 10;
+        this.gravity = 0.15 + Math.random() * 0.15;
+        this.rotation = Math.random() * 360;
+        this.rotationSpeed = -4 + Math.random() * 8;
+        this.opacity = 1;
+        this.isHeart = isHeart || Math.random() > 0.8; // some default hearts
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.speedY += this.gravity;
+        this.y += this.speedY;
+        this.rotation += this.rotationSpeed;
+        if (this.y > canvas.height) {
+          this.opacity -= 0.02;
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate((this.rotation * Math.PI) / 180);
+        ctx.globalAlpha = Math.max(0, this.opacity);
+        ctx.fillStyle = this.color;
+
+        if (this.isHeart) {
+          // Draw heart
+          ctx.beginPath();
+          const d = this.size;
+          ctx.moveTo(0, -d / 4);
+          ctx.bezierCurveTo(-d / 2, -d * 0.75, -d * 1.1, -d / 3, 0, d * 0.75);
+          ctx.bezierCurveTo(d * 1.1, -d / 3, d / 2, -d * 0.75, 0, -d / 4);
+          ctx.closePath();
+          ctx.fill();
+        } else {
+          // Draw square/circle
+          ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+        }
+
+        ctx.restore();
+      }
+    }
+
+    function triggerConfettiBurst(count = 80, isHeart = false) {
+      const startX = canvas.width / 2;
+      const startY = canvas.height * 0.6;
+      for (let i = 0; i < count; i++) {
+        particles.push(new ConfettiParticle(
+          startX + (-50 + Math.random() * 100),
+          startY + (-20 + Math.random() * 40),
+          isHeart
+        ));
+      }
+    }
+
+    function triggerCornerConfetti() {
+      // Bottom Left
+      for (let i = 0; i < 40; i++) {
+        const p = new ConfettiParticle(0, canvas.height);
+        p.speedX = 4 + Math.random() * 8;
+        p.speedY = -10 - Math.random() * 10;
+        particles.push(p);
+      }
+      // Bottom Right
+      for (let i = 0; i < 40; i++) {
+        const p = new ConfettiParticle(canvas.width, canvas.height);
+        p.speedX = -4 - Math.random() * 8;
+        p.speedY = -10 - Math.random() * 10;
+        particles.push(p);
+      }
+    }
+
+    function confettiLoop() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        particles[i].draw();
+
+        if (particles[i].y > canvas.height + 20 && particles[i].opacity <= 0) {
+          particles.splice(i, 1);
+        }
+      }
+
+      requestAnimationFrame(confettiLoop);
+    }
+
+    // ------------------------------
+    // KUIS INTERAKTIF LOGIC
+    // ------------------------------
+    function selectQuizOption(option) {
+      const qBox = document.getElementById('quiz-question-box');
+      const rBox = document.getElementById('quiz-result-box');
+      const rEmoji = document.getElementById('quiz-emoji');
+      const rMsg = document.getElementById('quiz-message');
+
+      qBox.style.display = 'none';
+      rBox.style.display = 'block';
+
+      // Reset any active ngambek/screen effects
+      stopNgambekRain();
+      document.body.classList.remove('shake-screen');
+
+      if (option === 'iya') {
+        rEmoji.textContent = '😊💕';
+        rMsg.textContent = "Ohh iya aja nih? 🥲 Tcih dahlah seng";
+        triggerConfettiBurst(50, true);
+      }
+      else if (option === 'sayang-banget') {
+        rEmoji.textContent = '😭💖💖';
+        rMsg.textContent = "WAAAH SAYANG BANGEETT?? 😭💖💖 Aku juga sayang banget-banget-banget sama sayang! Makasiii udah milih yang ini!!";
+        // Massive burst of hearts
+        triggerConfettiBurst(100, true);
+        triggerCornerConfetti();
+      }
+      else if (option === 'banget-banget') {
+        rEmoji.textContent = '😱💕🔥';
+        rMsg.textContent = "BANGET BANGET??? 😱💕 YEYYY! Ini jawaban terbaik yeahhh!! Love you mostt sayangg 💞";
+        // Shake screen animation
+        document.body.classList.add('shake-screen');
+        setTimeout(() => {
+          document.body.classList.remove('shake-screen');
+        }, 600);
+        triggerConfettiBurst(80, true);
+      }
+      else if (option === 'sayang-aja') {
+        rEmoji.textContent = '🥲🌧️';
+        rMsg.textContent = "...Sayang aja?? 🥲 Oke fine, NOTED! Gapapa. Aku gapapa kok. Tcih. Selamat ulang tahun deh!";
+        // Trigger Ngambek rain
+        startNgambekRain();
+      }
+    }
+
+    function resetQuiz() {
+      document.getElementById('quiz-question-box').style.display = 'block';
+      document.getElementById('quiz-result-box').style.display = 'none';
+      stopNgambekRain();
+      document.body.classList.remove('shake-screen');
+    }
+
+    // NGAMBEK RAIN EFFECT
+    let rainInterval = null;
+    function startNgambekRain() {
+      const container = document.getElementById('rain-overlay');
+      const rainEmojis = ['😢', '🌧️', '💧', '💔', '😭'];
+
+      rainInterval = setInterval(() => {
+        if (document.hidden) return;
+        const drop = document.createElement('div');
+        drop.classList.add('rain-drop');
+        drop.textContent = rainEmojis[Math.floor(Math.random() * rainEmojis.length)];
+
+        const startX = Math.random() * 100;
+        const speed = 2 + Math.random() * 2;
+
+        drop.style.left = startX + 'vw';
+        drop.style.animationDuration = speed + 's';
+
+        container.appendChild(drop);
+
+        setTimeout(() => {
+          drop.remove();
+        }, speed * 1000);
+      }, 150);
+    }
+
+    function stopNgambekRain() {
+      clearInterval(rainInterval);
+      const container = document.getElementById('rain-overlay');
+      container.innerHTML = '';
+    }
+
+    // ------------------------------
+    // LIGHTBOX LOGIC
+    // ------------------------------
+    function openLightbox(assetId, captionText) {
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCap = document.getElementById('lightbox-caption');
+
+      lbImg.src = loadedAssets[assetId];
+      lbCap.textContent = captionText;
+
+      // Rotate if it is foto2 or foto3
+      lbImg.style.transform = '';
+      if (assetId === 'foto2' || assetId === 'foto3') {
+        lbImg.style.transform = 'rotate(90deg)';
+      }
+
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Lock background scroll
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('open');
+      document.body.style.overflow = ''; // Restore scroll
+    }
+
+    // ------------------------------
+    // VIRTUAL HUG LOGIC
+    // ------------------------------
+    function sendVirtualHug() {
+      const overlay = document.getElementById('hug-overlay');
+      const leftHand = document.getElementById('hug-hand-left');
+      const rightHand = document.getElementById('hug-hand-right');
+      const statusText = document.getElementById('hug-status');
+      const btn = document.getElementById('hug-trigger-btn');
+
+      // Disable button during animation
+      btn.style.pointerEvents = 'none';
+      btn.style.opacity = '0.7';
+
+      // 1. Show overlay background and animate hands in
+      overlay.style.opacity = '1';
+      leftHand.style.transform = 'rotate(15deg) translate(calc(50vw - 40px), 0)';
+      rightHand.style.transform = 'scaleX(-1) rotate(15deg) translate(calc(50vw - 40px), 0)';
+
+      // 2. Perform glow flash & screen shock
+      setTimeout(() => {
+        overlay.classList.add('screen-glow');
+        triggerConfettiBurst(60, true);
+      }, 700);
+
+      // 3. Complete and slide out
+      setTimeout(() => {
+        // Hug finished, reset hand positions
+        leftHand.style.transform = 'rotate(45deg) translate(0, 0)';
+        rightHand.style.transform = 'scaleX(-1) rotate(45deg) translate(0, 0)';
+        overlay.style.opacity = '0';
+        overlay.classList.remove('screen-glow');
+
+        // Update status text
+        statusText.textContent = "Pelukan terkirim! Semoga kerasa ya hangatnya 💕🤗";
+
+        // Re-enable button
+        btn.style.pointerEvents = 'auto';
+        btn.style.opacity = '1';
+      }, 2500);
+    }
+  </script>
+</body>
+
+</html>
